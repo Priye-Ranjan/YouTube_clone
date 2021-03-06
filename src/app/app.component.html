@@ -1,0 +1,24 @@
+<app-navbar></app-navbar>
+<div id="content">
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <button type="button" id="sidebarCollapse" class="btn btn-default btn-sm">
+        <i class="fa fa-align-justify"></i>
+      </button>
+    </div>
+  </nav>
+  <div class="main-content">
+    <div class="sidebar">
+      <div class="sidebar-heading" *ngFor="let element of data">
+        <!-- {{ element2.head }} (click)="openMenu()" [ngclass]="{ show: isMenuOpen }"-->
+        <app-sidebar [sideObj]="element"></app-sidebar>
+      </div>
+    </div>
+    <div class="video mx-auto">
+      <div class="content">
+        <!-- I am angular I am angular I am angular -->
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</div>

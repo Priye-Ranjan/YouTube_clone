@@ -1,0 +1,25 @@
+.main-content {
+  display: inline;
+  width: 300px !important;
+  /* display: flex;
+  flex-direction: column; */
+}
+.sidebar-heading {
+  /* float: left; */
+  width: 100% !important;
+  /* display: flex;
+  flex-direction: row; */
+}
+.content {
+  width: 100% !important;
+}
+.sidebar {
+  float: left;
+  width: 200px !important;
+}
+.video {
+  margin: auto;
+  padding: auto;
+  float: left !important;
+  width: 1000px !important;
+}

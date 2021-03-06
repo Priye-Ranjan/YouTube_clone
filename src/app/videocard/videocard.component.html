@@ -1,0 +1,18 @@
+<div class="container">
+  <a
+    [routerLink]="['/videoplayer', youData.id.videoId]"
+    class="btn btn-default"
+  >
+    <div class="card-group mx-0">
+      <img [src]="youData.snippet.thumbnails.medium.url" alt="" />
+      <div class="card-body">
+        <h5 class="card-title">
+          <strong>{{ youData.snippet.title }}</strong>
+        </h5>
+        <br />
+        <h6 class="card-subscriber">{{ youData.snippet.channelTitle }}</h6>
+        <!-- <h5 class="card-time">{{ youData.publishTime }}</h5> -->
+      </div>
+    </div>
+  </a>
+</div>

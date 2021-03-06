@@ -1,0 +1,32 @@
+<!-- <div class="sidebar col-fixed">
+  <span *ngIf="sideObj.head"
+    ><hr />
+    {{ sideObj.head }}
+    <hr
+  /></span>
+  <span *ngIf="sideObj.subhead">{{ sideObj.subhead }}</span>
+</div> -->
+<div class="container-wrapper mb-0 ml-4">
+  <!-- Sidebar  -->
+  <nav id="sidebar">
+    <span *ngIf="sideObj.head"
+      ><hr />
+      {{ sideObj.head }}
+      <hr
+    /></span>
+    <ul class="list-unstyled">
+      <li class="active">
+        <a href="#">
+          <i class="{{ sideObj.image }}"></i>
+
+          <span *ngIf="sideObj.subhead"
+            ><button class="btn btn-default">
+              {{ sideObj.subhead }}
+            </button></span
+          >
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>
+<!-- Page Content  -->
