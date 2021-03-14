@@ -1,0 +1,101 @@
+<h2 style="text-align: center">Sign Up</h2>
+<br /><br />
+<div class="d-flex justify-content-center h-100">
+  <div class="row">
+    <form [formGroup]="userFormGroup" (ngSubmit)="submitForm()">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="">Email Id</label>
+            <input
+              type="text"
+              formControlName="email"
+              class="form-control"
+              placeholder="xyz@gmail.com"
+              size="50  "
+            />
+            <span
+              style="color: crimson"
+              *ngIf="
+                !userFormGroup.get('email').valid &&
+                userFormGroup.get('email').touched
+              "
+              >Please enter a valid Email Id</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="">Password</label>
+            <input
+              type="password"
+              formControlName="password"
+              class="form-control"
+              placeholder="Password"
+            />
+            <span
+              *ngIf="
+                userFormGroup.get('password').touched &&
+                userFormGroup.get('password').errors?.required &&
+                !userFormGroup.get('password').valid
+              "
+              style="color: red"
+              >Field is Required</span
+            >
+            <span
+              *ngIf="userFormGroup.get('password').errors?.pattern"
+              style="color: red"
+              >Password should contain lower, upper, number, special and minimum
+              of 8 characters</span
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="form-group">
+            <label for="">Confirm Password</label>
+            <input
+              type="password"
+              formControlName="confirmpass"
+              class="form-control"
+              placeholder="Confirm Password"
+            />
+            <span
+              *ngIf="
+                userFormGroup.get('confirmpass').touched &&
+                userFormGroup.get('confirmpass').errors?.required &&
+                !userFormGroup.get('confirmpass').valid
+              "
+              style="color: red"
+              >Field is Required</span
+            >
+            <span
+              *ngIf="
+                !userFormGroup.get('confirmpass').errors?.required &&
+                userFormGroup?.get('confirmpass').touched &&
+                userFormGroup.value.password != userFormGroup.value.confirmpass
+              "
+              style="color: red"
+              >Password does not match</span
+            >
+            <span
+              *ngIf="
+                userFormGroup.get('confirmpass').valid &&
+                userFormGroup?.get('confirmpass').touched &&
+                userFormGroup.value.password1 == userFormGroup.value.confirmpass
+              "
+              style="color: green"
+              >Password Matched</span
+            >
+          </div>
+        </div>
+      </div>
+      <button routerLink="/" class="bt btn-success" type="submit">
+        Register
+      </button>
+    </form>
+  </div>
+</div>

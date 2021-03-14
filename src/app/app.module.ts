@@ -12,6 +12,8 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { VideolistComponent } from './videolist/videolist.component';
 import { VideoplayerComponent } from './videoplayer/videoplayer.component';
 import { YouTubePlayerModule } from '@angular/youtube-player';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,6 +23,8 @@ import { YouTubePlayerModule } from '@angular/youtube-player';
     SidebarComponent,
     VideolistComponent,
     VideoplayerComponent,
+    LoginComponent,
+    RegisterComponent,
   ],
   imports: [
     BrowserModule,
